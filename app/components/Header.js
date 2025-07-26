@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all">
-      <div className="px-[2%] lg:px-[14%] py-4 flex justify-between items-center">
+      <div className="px-[2%] lg:px-[10%] py-4 flex justify-between items-center">
         {/* Logo with Motion */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}

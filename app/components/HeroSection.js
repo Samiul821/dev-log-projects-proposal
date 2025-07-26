@@ -6,7 +6,7 @@ import developerAnimation from "../../public/developer skills.json";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center px-[2%] lg:px-[14%] overflow-hidden bg-gradient-to-br from-blue-100 via-white to-purple-100">
+    <section className="relative min-h-[70vh] flex items-center justify-between px-[2%] lg:px-[10%] overflow-hidden bg-gradient-to-br from-blue-100 via-white to-purple-100">
       {/* Glowing Blobs */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-200"></div>
