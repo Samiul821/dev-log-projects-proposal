@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -13,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all">
+    <nav className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all">
       <div className="px-[2%] lg:px-[10%] py-4 flex justify-between items-center">
         {/* Logo with Motion */}
         <motion.div
@@ -36,16 +38,25 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors relative group"
-            >
-              {link.name}
-              <span className="block h-[2px] w-0 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-gray-700 hover:text-blue-600 font-medium transition-colors relative group ${
+                  isActive ? "text-blue-600 font-semibold" : ""
+                }`}
+              >
+                {link.name}
+                <span
+                  className={`block h-[2px] bg-blue-600 transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
+              </Link>
+            );
+          })}
         </motion.nav>
 
         {/* Mobile Toggle Button */}
@@ -67,18 +78,25 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="md:hidden px-4 pt-2 pb-4 bg-white"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-gray-800 hover:text-blue-600 font-medium transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`block py-2 font-medium transition-colors ${
+                    isActive
+                      ? "text-blue-600 font-semibold"
+                      : "text-gray-800 hover:text-blue-600"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </motion.nav>
         )}
       </AnimatePresence>
-    </header>
+    </nav>
   );
 }
