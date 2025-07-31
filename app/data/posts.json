@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "Understanding JavaScript Closures",
+    "slug": "javascript-closures",
+    "description": "A deep dive into closures in JavaScript with examples.",
+    "author": "Samiul Islam",
+    "date": "2025-07-30",
+    "tags": ["JavaScript", "Closure", "Advanced"],
+    "thumbnail": "https://i.ibb.co/FkQSFkvV/js.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Getting Started with Tailwind CSS",
+    "slug": "tailwind-css-guide",
+    "description": "Learn how to style your website using utility-first Tailwind CSS.",
+    "author": "Samiul Islam",
+    "date": "2025-07-28",
+    "tags": ["CSS", "Tailwind", "Design"],
+    "thumbnail": "https://i.ibb.co/9mmW3LdP/tailwind-css.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Build a Blog with Next.js and Markdown",
+    "slug": "nextjs-markdown-blog",
+    "description": "Step-by-step guide to creating a static blog using Next.js and Markdown.",
+    "author": "Samiul Islam",
+    "date": "2025-07-25",
+    "tags": ["Next.js", "Markdown", "Blog"],
+    "thumbnail": "https://i.ibb.co/rB9nRvK/blog.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Introduction to Git and GitHub",
+    "slug": "git-github-intro",
+    "description": "Understand version control and learn how to use Git and GitHub effectively.",
+    "author": "Samiul Islam",
+    "date": "2025-07-22",
+    "tags": ["Git", "GitHub", "Version Control"],
+    "thumbnail": "https://i.ibb.co/TMhYbnjT/git.jpg"
+  },
+  {
+    "id": "5",
+    "title": "What is REST API and How It Works",
+    "slug": "rest-api-explained",
+    "description": "Learn the basics of REST APIs and how to consume them in your web applications.",
+    "author": "Samiul Islam",
+    "date": "2025-07-20",
+    "tags": ["API", "REST", "Backend"],
+    "thumbnail": "https://i.ibb.co/wNDR2869/api.jpg"
+  },
+  {
+    "id": "6",
+    "title": "React Hooks Explained with Examples",
+    "slug": "react-hooks-guide",
+    "description": "Understand React Hooks like useState and useEffect with practical examples.",
+    "author": "Samiul Islam",
+    "date": "2025-07-18",
+    "tags": ["React", "Hooks", "Frontend"],
+    "thumbnail": "https://i.ibb.co/8D5SZwzy/react.jpg"
+  }
+]
